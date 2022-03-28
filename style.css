@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Josefin+Sans:wght@100&family=Neonderthaw&family=Outfit:wght@100;200&family=Roboto+Mono:ital,wght@0,100;1,400&family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,400;1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--font-para); 
+}
+html{
+    font-size: 62.5%;
+}
+p,label,input::placeholder {
+     font-size: 1.9rem;
+     line-height: 170%;
+     color: #6c757d;
+}
+ figure img, .fab , .fas {
+     transition: var(--eff);
+ } 
+ a,a:hover {
+     text-decoration: none;
+     cursor: pointer;
+ }
+ body {
+     background-color: hsl(84, 3%, 94%);
+ }
+:root {
+    --bg-size:100% 100% ;
+    --main-color:#fff;
+    --title:'Josefin Sans', sans-serif;
+    --font-para: 'David Libre', serif;
+    --btn-color:#bbe1fa;
+    --btn-font-color:#000;
+    --btn-font: 1.5rem;
+}
+.mainheading {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 5rem;
+    color: #000;
+}
+.mainheadingpara {
+    font-size: 2.2rem;
+}
+.mainheaderdiv{
+    height: calc(100vh - 40vh);
+    background-image: linear-gradient(to right , rgba(0,0,0,0.8) 50% , rgba(0,0,0,0)) ,url("/Asset/images.jpg");
+    background-size: var(--bg-size);
+}
+.mainheaderdiv p {
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family:var(--title);
+    color: var(--main-color);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+.mainheaderdiv h2 {
+    font-size:6.5rem;
+    font-family: var(--title);
+    font-weight: bold;
+    color: var(--main-color);
+    position: relative;
+    padding-bottom: 2rem;
+    transition: var(--eff);
+}
+.mainheaderdiv span {
+    font-family: var(--title);
+}
+.animateworld  div li {
+    font-weight: bold;
+    padding: 0 1rem;
+    height: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: block;
+    font-family: var(--title);
+}
+.animateworld div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 8rem;
+    padding-top: 1px;
+    margin-top: -1rem;
+}
+.flip {
+    animation: flip4 10s cubic-bezier(0.23,1,0.32,1.2) infinite; ;
+}
+@keyframes flip4 {
+    0%{
+        margin-top: -360px;
+    }
+    5%{
+        margin-top: -270px;
+    }
+    25%{
+        margin-top: -270px;
+    }
+    30%{
+        margin-top: -180px;
+    }
+    50%{
+        margin-top: -180px;
+    }
+    55%{
+        margin-top: -90px;
+    }
+    75%{
+        margin-top: -90px;
+    }
+    80%{
+        margin-top: 0px;
+    }
+    99.9%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: -270px;
+    }
+} 
+.mainheaderdiv button {
+    color: var(--btn-font-color);
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: 0.8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+}
+.mainheaderdiv button:hover, img:hover, .leftreplybtn:hover, .leftlikebtn:hover , .subsbtn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 3rem -1rem rgba(255, 255, 255, 0.7);
+}
+.blogleftdiv h1 {
+    font-family: var(--title);
+    font-weight:bold;
+    font-size: 3rem;
+}    
+.blogleftdiv .blogtitle {
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+.blogleftdiv .blogtitle span {
+    color: #1b262c;
+}
+.blogleftdiv p span{
+    color: black;
+}
+.leftdivbtn {
+    margin-top: 3rem;
+    transition: var(--eff);
+}
+.leftlikebtn{
+    color: var(--btn-font-color);
+    /* border-width: .2rem; */
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: 0.8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none; 
+    border: none;   
+}
+.leftreplybtn {
+    color: var(--btn-font-color);
+    /* border-width: .2rem; */
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: 0.8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none; 
+    border: none; 
+}
+.replies {
+    margin: 20px 0;
+    padding: 10px 0;
+    transition: var(--eff);
+    display: none;
+}
+.replies i {
+    font-size: 35px;
+}
+.show {
+    margin: 20px 0;
+    transition: var(--eff);
+    display: block;
+}
+.aboutmediv {
+    width: auto;
+    height: 40rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom , transparent 50% , rgba(208,206,207,0.8)) ,url("/Asset/5.webp");
+    background-size: var(--bg-size);   
+}
+.aboutmediv p:first-child{
+    padding-bottom: 0.2rem;
+    font-size: 2.2rem;
+}
+.aboutmediv p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    color: #000;
+}
+.rightdivtitle {
+    background: #d0cecf;
+    box-shadow: 0 1rem 3rem -1rem rgba(255,255,255, 0.8);
+}
+.rightdivtitle h2{
+    font-size: 2.5rem;
+    padding-left: 2rem;
+}
+.popularpost1{
+    background-image: url(/Asset/bill.jpg);
+    background-size: var(--bg-size);   
+}
+.popularpost2{
+    background-image: url(/Asset/mark.jpg);
+    background-size: var(--bg-size);   
+}
+.popularpost3{
+    background-image: url(/Asset/jeff.jpg);
+    background-size: var(--bg-size);   
+}
+.popularpost4{
+    background-image: url(/Asset/elon.jpg);
+    background-size: var(--bg-size);   
+}
+.right_div{
+    background-color: #fff;
+    padding: 2.5rem 1rem;
+}
+.right_div .row {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+}
+.right_div .row:last-child{
+    margin-bottom: 0;
+}
+.tagsmain{
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: repeat(auto-fill,minmax(4rem, 8rem));
+    grid-gap: 0.5rem;
+}
+.tagsmain a{
+    font-size: 1.7rem;
+    line-height: 170%;
+    font-weight: lighter;
+    background-color: #6c757d;
+    transition: var(--eff);
+}
+.tagsmain a:hover {
+    color: var(--btn-font-color);
+    background-color: var(--btn-color);
+}
+.advertize {
+    min-width: 10rem;
+    height: 20rem;
+    display: grid;
+    place-items: center;
+}
+.fab {
+    color: #000;
+}
+.fab:hover {
+    color: #d0cecf;
+    transform: rotate(360deg);
+}
+.rightsubdiv #exampleInputEmail1 {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+}
+.subsbtn{
+    color: var(--btn-font-color);
+    /* border-width: .2rem; */
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: 0.8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none; 
+    border: none; 
+}
+.footer p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
